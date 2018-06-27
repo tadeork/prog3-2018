@@ -1,19 +1,23 @@
 <?php
 
 # declaración de clase
+/**
+ * Product está encargado de: 
+ * - asignar nombre
+ * - asignar precio
+ * - asignar estado de regalo
+ */
 class Product {
     # definición de propiedades
     private $name;
     private $price;
-    protected $stock;
+    protected $gift;
 
-    public function __construct($name = null, $price = null)
+    public function __construct($name = null, $price = 0, $gift = false)
     {
-        # simulamos que hay existencia del producto
-        $this->stock = true;
         $this->setName($name);
         $this->setPrice($price);
-        // ver página 237 del libro acerca de $this
+
         return $this;
     }
 
@@ -35,5 +39,11 @@ class Product {
     public function getName()
     {
         return $this->name;
+    }
+
+    // ¿es un regalo?
+    public function isGift()
+    {
+        return $this->gift;
     }
 }
