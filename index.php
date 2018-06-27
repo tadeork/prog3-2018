@@ -1,5 +1,5 @@
 <?php
-
+echo "<h1>Bienvenido</h1>";
 // ver página 51 del libro
 include 'Sell.php';
 include 'Product.php';
